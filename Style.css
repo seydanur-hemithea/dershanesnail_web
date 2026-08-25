@@ -1,0 +1,113 @@
+/*Bosluklari sifirlamak*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(232, 181, 232);
+}
+article{
+    width: 100%;
+    height: 100vh;  
+    background-color: rgb(232, 181, 232);
+    
+
+
+}
+aside{
+    
+    background-color: rgb(232, 181, 232);
+}
+a:link{
+    background-color: rgb(232, 181, 232);
+    text-align: center;
+    color:darkgreen;
+}
+h1{
+    color: darkgreen;
+}
+header #karsilamabanner {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(232, 181, 232);
+    display: flex;              /* Flexbox aktif */
+    justify-content: center;    /* Yatay ortalama */
+    align-items: center;        /* Dikey ortalama */
+    color: darkgreen;
+    font-size: 40px;
+}
+
+   
+
+header #kimya{
+    width: 100%;
+    height: 100px;
+    background-color: rgb(232, 181, 232);
+    text-align: center;
+    color: darkgreen;
+    margin-bottom: 5px;
+    
+}
+/* Menü genel stil */
+        #menu {
+            background-color:rgb(232, 181, 232);
+            padding: 10px;
+        }
+        #menu a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+        #menu a:hover {
+        background-color: rgb(232, 181, 232);
+        text-decoration: underline;   /* Altı çizili yapar */
+       }
+
+
+        /* Alt menü */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: rgb(232, 181, 232);
+            min-width: 160px;
+            z-index: 1;
+        }
+        .dropdown-content a {
+            display: block;
+            padding: 10px;
+        }
+        .dropdown-content a:hover {
+            background-color: rgb(232, 181, 232);
+        }
+        /* Hover ile açılır */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        #search {
+  width: 200px;
+  padding: 8px;
+}
+
+#suggestions {
+  border: 1px solid #ccc;
+  max-width: 200px;
+  margin-top: 5px;
+  position: absolute;
+  background: white;
+}
+
+#suggestions div {
+  padding: 5px;
+  cursor: pointer;
+}
+
+#suggestions div:hover {
+  background-color: #eee;
+}

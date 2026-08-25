@@ -1,0 +1,15 @@
+# VS ve VS Code ayar dosyaları
+.vs/
+.vscode/
+*.db
+*.sqlite
+
+# Gradle ve cache klasörleri
+.gradle/
+build/
+
+# Sistem klasörleri
+AppData/
+.VirtualBox/
+.android/
+videos/

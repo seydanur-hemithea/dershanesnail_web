@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+     
+     <header>
+        <div id="karsilamabanner">
+         Öğretmene Soru Sor
+         </div>
+     </header>
+     <script src="question.js"></script>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+
+
+       
+        <form id="soruForm">
+    <input type="radio" name="ders" value="matematik" checked>Matematik<br>
+    <input type="radio" name="ders" value="fizik">Fizik<br>
+    <input type="radio" name="ders" value="kimya">Kimya<br>
+    <input type="radio" name="ders" value="biyoloji">Biyoloji<br><br>
+
+    <label for="soru">Sorunuzu buraya yazın:</label><br>
+    <textarea id="soru" name="soru" rows="4" cols="50"></textarea><br>
+
+    <button type="button" onclick="sendQuestion()">Gönder</button>
+    <input type="reset" value="Temizle">
+
+    <input type="checkbox" id="gizli" name="gizli" value="true">
+    <label for="gizli">Soruyu gizli bırak</label><br>
+</form>
+
+<div id="questionBox"></div>
+
+    <h2>Daha Önce Sorulmuş Sorulara Göz Atabilirsiniz </h2>
+
+    </body>
+    
+</html>

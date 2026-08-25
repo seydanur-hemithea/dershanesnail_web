@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+   <script src="suggestion.js"></script>
+ <h3 >
+            <strong>Online Deneme Sinavlari</strong>
+            <ol>
+                <li>Deneme1</li>
+                <li>Deneme2</li>    
+                <li>Deneme3</li>            
+            </ol>
+        </h3>
+    </body>
+</html>

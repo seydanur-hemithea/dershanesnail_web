@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <header>
+        <div id="karsilamabanner">
+         Öğrenci Bilgilerinizi Giriniz
+         </div>
+     </header>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+
+  
+  <form name="giris" action="giris.php" method="POST">
+    <label for="ogrenci_no">Öğrenci Numarası:</label><br>
+    <input type="number" id="ogrenci_no" name="ogrenci_no" required><br>
+    <label for="sifre">Şifre:</label><br>
+    <input type="password" id="sifre" name="sifre" required><br>
+    <input type="submit" value="Giriş Yap">
+  </form>
+</body>
+</html>
+
+     

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">    
+    <head>
+        </head>
+        <body>
+<script>
+
+ var toplam = 0, ortalama = 0;
+ var sayilar = [];
+ var tek = [];
+ var cift = [];
+ var tek_toplam = 0;
+ var cift_toplam = 0;
+
+ // Sayıları al
+ for(var i=0; i<5; i++) {
+     sayilar[i] = Number(prompt("Sayiyi giriniz:"));
+ }
+
+ // Tek / Çift ayrımı ve toplam
+ for(var i=0; i<5; i++) {
+     toplam += sayilar[i];
+     if(sayilar[i] % 2 == 0) {
+         cift.push(sayilar[i]);
+         cift_toplam += sayilar[i];
+     } else {
+         tek.push(sayilar[i]);
+         tek_toplam += sayilar[i];
+     }
+ }
+
+ // Ortalama
+ ortalama = toplam / 5;
+
+ // Sonuçları yazdır
+ document.write("Sayilarin Toplami: " + toplam + "<br>");
+ document.write("Sayilarin Ortalamasi: " + ortalama + "<br>");
+ document.write("Cift Sayilarin Toplami: " + cift_toplam + "<br>");
+ document.write("Tek Sayilarin Toplami: " + tek_toplam + "<br>");
+
+
+</script>
+            
+                
+   
+   </body>
+              
+</html>

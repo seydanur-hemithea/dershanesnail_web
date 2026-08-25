@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+     <header>
+        <div id="karsilamabanner">
+         Kimya
+         </div>
+     </header>
+     <input type="text" id="search" placeholder="Konu ara...">
+  <div id="suggestions"></div>
+
+   <script src="autocomplate.js"></script> <!-- JS bağlama -->
+      <script src="clickevent.js"></script> <!-- JS bağlama -->
+     <script src="suggestion.js"></script>
+     
+  
+  
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+<h1>
+   tüm videolar
+
+        </h1>
+        <h1>videoyu izle</h1>
+        <video width="200" height="300" controls>
+            <source src="videos/geyik.mp4" type="video/mp4">
+              
+        <a href="images/salyangoz.png" download="salyangoz.png">Bu videonun notunu indir</a>
+        
+    </body>
+
+</html>

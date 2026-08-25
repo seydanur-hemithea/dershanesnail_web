@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <title>Öğrenci Giriş</title>
+  <!-- Menü CSS dosyasını çağırıyoruz -->
+  <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+    <script src="snail.js"></script>
+     
+     <header>
+        <div id="karsilamabanner">
+         Sınav Sonuçları
+         </div>
+     </header>
+  <div id="menu"></div>
+  <script>
+    fetch("menu.html")
+      .then(res => res.text())
+      .then(data => document.getElementById("menu").innerHTML = data);
+  </script>
+
+        <a href="images/salyangoz.png" download="salyangoz.png">Sinav Sonuclarini indir</a>
+       
+        <table border="1">
+          <caption>Sizin tüm notlariniz</caption>
+            <tr>
+                <th>Ogrenci Adi</th>
+                <th>sinav id</th>
+                <th>Sinav Notu</th>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>1</td>
+                <td>85</td>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>2</td>
+                <td>92</td>
+            </tr>
+            <tr>
+                <td>Ali</td>
+                <td>3</td>
+                <td>78</td>
+            </tr>
+        </table>
+        <br>
+       
+        <table border="1">
+          <caption>Arkadaşlarınızın son sinav notları</caption>
+          <thead>
+            <tr>
+                <th>Ogrenci Adi</th>
+                <th>Ogrenci Soyadi</th>
+                <th>Sinav Notu</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Ali</td>
+                <td>Yilmaz</td>
+                <td id="note1">85</td>
+            </tr>
+            <tr>
+                <td>Ayse</td>
+                <td>Kaya</td>
+                <td id="note2">92</td>
+            </tr>
+            <tr>
+                <td>Mehmet</td>
+                <td>Demir</td>
+                <td id="note3">78</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+                <td colspan="2">Ortalama</td>
+                <td id="average">80</td>
+
+            </tr>
+            <script>
+                // Ortalama hesaplama
+                var note1 = parseFloat(document.getElementById("note1").textContent);
+                var note2 = parseFloat(document.getElementById("note2").textContent);
+                var note3 = parseFloat(document.getElementById("note3").textContent);
+                var average = (note1 + note2 + note3) / 3;
+                document.getElementById("average").textContent = average.toFixed(2);
+                </script>
+          </tfoot>
+        </table>
+
+        
+    </body>
+</html>
